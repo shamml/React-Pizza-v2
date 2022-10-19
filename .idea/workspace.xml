@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13a95ee6-ee35-4b2b-9dd6-603ddc163afe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/PizzaBlock/Skeleton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Discord.lnk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/Gift Finder.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/debug.log" beforeDir="false" />
@@ -652,7 +653,12 @@
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/cards/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/card.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/forms/Forms.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react-live-search/src/components/forms/Forms.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/forms/forms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../react-live-search/src/components/forms/forms.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-pro" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-project" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-router-dom-1/src/components/content/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/content/Contact.jsx" afterDir="false" />
@@ -729,7 +735,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -782,7 +788,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665951076373</updated>
       <workItem from="1665951078013" duration="2030000" />
-      <workItem from="1666103299190" duration="13924000" />
+      <workItem from="1666103299190" duration="21122000" />
     </task>
     <servers />
   </component>
