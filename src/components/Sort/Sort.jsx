@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Sort(props) {
+export function Sort() {
   const sort = ["популярности", "цене", "алфавиту"];
 
   const [open, setOpen] = React.useState(false);

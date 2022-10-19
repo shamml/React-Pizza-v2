@@ -1,7 +1,6 @@
 import React from "react";
 
 export function PizzaBlock({ imageUrl, name, price, sizes, types }) {
-
   const typeNames = ["тонкое", "традиционное"];
 
   const [activeTypes, setActiveTypes] = React.useState(0);
