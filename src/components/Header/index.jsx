@@ -1,7 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Search } from '../Search';
 
-export function Header() {
+export function Header({ searchValue, setSearchValue }) {
   return (
     <div className="header">
       <div className="container">
@@ -9,11 +10,12 @@ export function Header() {
           <div className="header__logo">
             <img width="38" src="img/pizza-logo.svg" alt="Pizza logo" />
             <div>
-              <h1>React Pizza</h1>
+              <h1>React Pizza v2</h1>
               <p>самая вкусная пицца во вселенной</p>
             </div>
           </div>
         </Link>
+        <Search searchValue={searchValue} setSearchValue={setSearchValue} />
         <div className="header__cart">
           <Link to="/cart" className="button button--cart">
             <span>520 ₽</span>

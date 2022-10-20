@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13a95ee6-ee35-4b2b-9dd6-603ddc163afe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/NotFaundBlock.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/NotFound.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Paginatoin.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pagination/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Discord.lnk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/Gift Finder.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/debug.log" beforeDir="false" />
@@ -657,16 +656,23 @@
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/cards/card.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/card.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/forms/Forms.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react-live-search/src/components/forms/Forms.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/forms/forms.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../react-live-search/src/components/forms/forms.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/img/pizza-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NotFoundBlock/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/Skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/Skeleton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NotFound.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-pro" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-project" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-router-dom-1/src/components/content/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/content/Contact.jsx" afterDir="false" />
@@ -796,7 +802,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665951076373</updated>
       <workItem from="1665951078013" duration="2030000" />
-      <workItem from="1666103299190" duration="25822000" />
+      <workItem from="1666103299190" duration="48794000" />
     </task>
     <servers />
   </component>

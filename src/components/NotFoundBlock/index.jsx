@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./NotFaundBlock.module.scss";
+import React from 'react';
+import styles from './NotFaundBlock.module.scss';
 
 export function NotFoundBlock() {
   return (
