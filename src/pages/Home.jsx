@@ -5,8 +5,10 @@ import { Sort } from '../components/Sort/Sort';
 import { Skeleton } from '../components/PizzaBlock/Skeleton';
 import { PizzaBlock } from '../components/PizzaBlock';
 import { Pagination } from '../components/Pagination';
+import { SearchContext } from '../App';
 
-export function Home({ searchValue }) {
+export function Home() {
+  const { searchValue } = React.useContext(SearchContext);
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [categoryId, setCategoryId] = React.useState(0);
@@ -25,7 +27,7 @@ export function Home({ searchValue }) {
     const search = searchValue ? `search=${searchValue}` : '';
 
     fetch(
-      `https://634feb7878563c1d82b38ce5.mockapi.io/items?page=${currentPage}&limit=8${category}&sortBy=${sortBy}&order=${order}${search}`,
+      `https://634feb7878563c1d82b38ce5.mockapi.io/items?page=${currentPage}&limit=8&${category}&sortBy=${sortBy}&order=${order}${search}`,
     )
       .then((res) => res.json())
       .then((json) => {

@@ -1,8 +1,11 @@
 import React from 'react';
 
 import styles from './Search.module.scss';
+import { SearchContext } from '../../App';
 
-export function Search({ searchValue, setSearchValue }) {
+export function Search() {
+  const { searchValue, setSearchValue } = React.useContext(SearchContext);
+
   return (
     <div className={styles.root}>
       <svg
@@ -47,7 +50,7 @@ export function Search({ searchValue, setSearchValue }) {
         placeholder="Поиск пиццы..."
       />
       <svg
-        // onClick={onClickClear}
+        onClick={() => setSearchValue('')}
         className={styles.clearIcon}
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"

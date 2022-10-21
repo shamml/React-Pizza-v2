@@ -10,10 +10,6 @@ export function Categories({ categoryId, handleCategory }) {
     'Закрытые',
   ];
 
-  // const onClickCategory = (index) => {
-  //   setActiveIndex(index);
-  // };
-
   return (
     <div className="categories">
       <ul>
