@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Categories({ categoryId, handleCategory }) {
+export const Categories = ({ categoryId, handleCategory }) => {
   const category = [
     'Все',
     'Мясные',
@@ -25,4 +25,4 @@ export function Categories({ categoryId, handleCategory }) {
       </ul>
     </div>
   );
-}
+};

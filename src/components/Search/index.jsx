@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce';
 import styles from './Search.module.scss';
 import { SearchContext } from '../../App';
 
-export function Search() {
+export const Search = () => {
   const { setSearchValue } = React.useContext(SearchContext);
   const [value, setValue] = React.useState('');
   const inputRef = React.useRef();
@@ -80,4 +80,4 @@ export function Search() {
       </svg>
     </div>
   );
-}
+};

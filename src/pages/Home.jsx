@@ -7,13 +7,18 @@ import { PizzaBlock } from '../components/PizzaBlock';
 import { Pagination } from '../components/Pagination';
 import { SearchContext } from '../App';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCategoryId, setCurrentPage } from '../redux/slices/filterSlice'
+import { setCategoryId, setCurrentPage } from '../redux/slices/filterSlice';
 import axios from 'axios';
+import qs from 'qs';
+import { useNavigate } from 'react-router-dom';
 
-export function Home() {
+export const Home = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const { categoryId, sort, currentPage } = useSelector((state) => state.filter);
+  const { categoryId, sort, currentPage } = useSelector(
+    (state) => state.filter,
+  );
 
   const { searchValue } = React.useContext(SearchContext);
   const [items, setItems] = React.useState([]);
@@ -23,8 +28,8 @@ export function Home() {
     dispatch(setCategoryId(id));
   };
   const onChangePage = (number) => {
-    dispatch(setCurrentPage(number))
-  }
+    dispatch(setCurrentPage(number));
+  };
 
   React.useEffect(() => {
     setIsLoading(true);
@@ -45,6 +50,15 @@ export function Home() {
     window.scroll(0, 0);
   }, [categoryId, sort.sortProperty, currentPage, searchValue]);
 
+  React.useEffect(() => {
+    const queryString = qs.stringify({
+      sortProperty: sort.Property,
+      categoryId,
+      currentPage,
+    });
+    navigate(`?${queryString}`);
+  }, [sort.sortProperty, categoryId, currentPage]);
+
   const pizzas = items
     .filter((obj) => obj.name.toUpperCase().includes(searchValue.toUpperCase()))
     .map((obj) => <PizzaBlock key={obj.id} {...obj} />);
@@ -62,4 +76,4 @@ export function Home() {
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </div>
   );
-}
+};
