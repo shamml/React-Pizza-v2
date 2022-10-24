@@ -1,26 +1,26 @@
 import React from 'react';
-
+import axios from 'axios';
+import qs from 'qs';
+import { useNavigate } from 'react-router-dom';
 import { Categories } from '../components/Categories';
 import { Sort } from '../components/Sort/Sort';
 import { Skeleton } from '../components/PizzaBlock/Skeleton';
 import { PizzaBlock } from '../components/PizzaBlock';
 import { Pagination } from '../components/Pagination';
-import { SearchContext } from '../App';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCategoryId, setCurrentPage } from '../redux/slices/filterSlice';
-import axios from 'axios';
-import qs from 'qs';
-import { useNavigate } from 'react-router-dom';
+import {
+  selectFilter,
+  setCategoryId,
+  setCurrentPage,
+} from '../redux/slices/filterSlice';
+
 
 export const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { categoryId, sort, currentPage } = useSelector(
-    (state) => state.filter,
-  );
+  const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
 
-  const { searchValue } = React.useContext(SearchContext);
   const [items, setItems] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
 
