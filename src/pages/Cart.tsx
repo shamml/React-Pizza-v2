@@ -5,11 +5,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { clearItem, selectCart } from '../redux/slices/cartSlice';
 import { CartEmpty } from '../components/Cart/CartEmpty';
 
-export const Cart = () => {
+export const Cart: React.FC = () => {
   const dispatch = useDispatch();
   const { items, totalPrice } = useSelector(selectCart);
 
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const totalCount = items.reduce(
+    (sum: number, item: any) => sum + item.count,
+    0,
+  );
 
   const handleClear = () => {
     if (window.confirm('Вы действительно хотите очистить корзину?'))
@@ -78,7 +81,7 @@ export const Cart = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-              <paL
+              <path
                 d="M8.33337 9.16667V14.1667"
                 stroke="#B6B6B6"
                 strokeWidth="1.2"
@@ -98,7 +101,7 @@ export const Cart = () => {
           </div>
         </div>
         <div className="content__items">
-          {items.map((item) => (
+          {items.map((item: any) => (
             <CartItem key={item.id} {...item} />
           ))}
         </div>

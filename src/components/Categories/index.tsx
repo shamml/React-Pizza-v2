@@ -1,7 +1,15 @@
 import React from 'react';
 
-export const Categories = ({ categoryId, handleCategory }) => {
-  const category = [
+type CategoriesProps = {
+  categoryId: number;
+  handleCategory: any;
+};
+
+export const Categories: React.FC<CategoriesProps> = ({
+  categoryId,
+  handleCategory,
+}) => {
+  const categories = [
     'Все',
     'Мясные',
     'Вегетарианская',
@@ -13,7 +21,7 @@ export const Categories = ({ categoryId, handleCategory }) => {
   return (
     <div className="categories">
       <ul>
-        {category.map((items, i) => (
+        {categories.map((items, i) => (
           <li
             key={i}
             onClick={() => handleCategory(i)}
