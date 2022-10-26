@@ -7,7 +7,7 @@ import {
   TCartItem,
 } from '../../redux/slices/cartSlice';
 
-type CartItemProps = {
+type TCartItemProps = {
   id: number;
   imageUrl: string;
   name: string;
@@ -17,7 +17,7 @@ type CartItemProps = {
   size: number;
 };
 
-export const CartItem: React.FC<CartItemProps> = ({
+export const CartItem: React.FC<TCartItemProps> = ({
   id,
   imageUrl,
   name,
@@ -53,7 +53,8 @@ export const CartItem: React.FC<CartItemProps> = ({
         </p>
       </div>
       <div className="cart__item-count">
-        <div
+        <button
+          disabled={count === 1}
           onClick={handleMinus}
           className="button button--outline button--circle cart__item-count-minus"
         >
@@ -73,9 +74,9 @@ export const CartItem: React.FC<CartItemProps> = ({
               fill="#EB5A1E"
             />
           </svg>
-        </div>
+        </button>
         <b>{count}</b>
-        <div
+        <button
           onClick={handlePlus}
           className="button button--outline button--circle cart__item-count-plus"
         >
@@ -95,7 +96,7 @@ export const CartItem: React.FC<CartItemProps> = ({
               fill="#EB5A1E"
             />
           </svg>
-        </div>
+        </button>
       </div>
       <div className="cart__item-price">
         <b>{price * count} ₽</b>

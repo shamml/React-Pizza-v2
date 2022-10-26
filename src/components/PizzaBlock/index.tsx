@@ -9,7 +9,7 @@ import {
 
 const typeNames = ['тонкое', 'традиционное'];
 
-type PizzaBlockProps = {
+type TPizzaBlockProps = {
   id: number;
   imageUrl: string;
   name: string;
@@ -19,7 +19,7 @@ type PizzaBlockProps = {
   rating: number;
 };
 
-export const PizzaBlock: React.FC<PizzaBlockProps> = ({
+export const PizzaBlock: React.FC<TPizzaBlockProps> = ({
   id,
   imageUrl,
   name,

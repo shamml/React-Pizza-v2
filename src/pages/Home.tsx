@@ -22,10 +22,10 @@ export const Home: React.FC = () => {
 
   const { items, status } = useSelector(selectPizzaData);
 
-  const handleCategory = (value: number) => {
+  const handleCategory = React.useCallback((value: number) => {
     dispatch(setCategoryId(value));
-    console.log(value);
-  };
+  }, []);
+
   const onChangePage = (value: number) => {
     dispatch(setCurrentPage(value));
   };
@@ -65,7 +65,7 @@ export const Home: React.FC = () => {
     <div className="container">
       <div className="content__top">
         <Categories categoryId={categoryId} handleCategory={handleCategory} />
-        <Sort />
+        <Sort  sortType={sort}/>
       </div>
       <h2 className="content__title">Все пиццы</h2>
       {status === 'error' ? (

@@ -1,13 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { TSort } from '../../redux/slices/filterSlice';
 
-import {
-  ESortProperty,
-  selectSort,
-  setSort,
-} from '../../redux/slices/filterSlice';
+import { ESortProperty, setSort } from '../../redux/slices/filterSlice';
 
-type SortItem = {
+type TSortItem = {
   name: string;
   sortProperty: ESortProperty;
 };
@@ -16,7 +13,11 @@ type PopupClick = MouseEvent & {
   path: Node[];
 };
 
-export const sortList: SortItem[] = [
+type TSortPopup = {
+  sortType: TSort;
+};
+
+export const sortList: TSortItem[] = [
   { name: 'популярности ⬆', sortProperty: ESortProperty.RATING_DESC },
   { name: 'популярности ⬇', sortProperty: ESortProperty.RATING_ASC },
   { name: 'цене ⬆', sortProperty: ESortProperty.PRICE_DESC },
@@ -25,14 +26,13 @@ export const sortList: SortItem[] = [
   { name: 'алфавиту ⬇', sortProperty: ESortProperty.TITLE_ASC },
 ];
 
-export const Sort: React.FC = () => {
+export const Sort: React.FC<TSortPopup> = React.memo(({ sortType }) => {
   const dispatch = useDispatch();
-  const sortType = useSelector(selectSort);
   const sortRef = React.useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = React.useState<boolean>(false);
 
-  const handleSort = (obj: SortItem) => {
+  const handleSort = (obj: TSortItem) => {
     dispatch(setSort(obj));
   };
 
@@ -85,4 +85,4 @@ export const Sort: React.FC = () => {
       )}
     </div>
   );
-};
+});
