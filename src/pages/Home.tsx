@@ -1,5 +1,6 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useAppDispatch } from '../redux/store';
 
 import { Categories } from '../components/Categories';
 import { Sort } from '../components/Sort/Sort';
@@ -14,15 +15,16 @@ import {
 import { fetchPizzas, selectPizzaData } from '../redux/slices/pizzaSlice';
 
 export const Home: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const { categoryId, sort, currentPage, searchValue } =
     useSelector(selectFilter);
 
   const { items, status } = useSelector(selectPizzaData);
 
-  const handleCategory = (idx: number) => {
-    dispatch(setCategoryId(idx));
+  const handleCategory = (value: number) => {
+    dispatch(setCategoryId(value));
+    console.log(value);
   };
   const onChangePage = (value: number) => {
     dispatch(setCurrentPage(value));
@@ -35,13 +37,12 @@ export const Home: React.FC = () => {
     const search = searchValue;
 
     dispatch(
-      // @ts-ignore
       fetchPizzas({
         sortBy,
         order,
         category,
         search,
-        currentPage,
+        currentPage: String(currentPage),
       }),
     );
 
@@ -63,7 +64,7 @@ export const Home: React.FC = () => {
   return (
     <div className="container">
       <div className="content__top">
-        <Categories value={categoryId} handleCategory={handleCategory} />
+        <Categories categoryId={categoryId} handleCategory={handleCategory} />
         <Sort />
       </div>
       <h2 className="content__title">Все пиццы</h2>

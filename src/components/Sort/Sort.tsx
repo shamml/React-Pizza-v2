@@ -1,19 +1,28 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectSort, setSort } from '../../redux/slices/filterSlice';
+
+import {
+  ESortProperty,
+  selectSort,
+  setSort,
+} from '../../redux/slices/filterSlice';
 
 type SortItem = {
   name: string;
-  sortProperty: string;
+  sortProperty: ESortProperty;
+};
+
+type PopupClick = MouseEvent & {
+  path: Node[];
 };
 
 export const sortList: SortItem[] = [
-  { name: 'популярности ⬆', sortProperty: 'rating' },
-  { name: 'популярности ⬇', sortProperty: '-rating' },
-  { name: 'цене ⬆', sortProperty: 'price' },
-  { name: 'цене ⬇', sortProperty: '-price' },
-  { name: 'алфавиту ⬆', sortProperty: 'title' },
-  { name: 'алфавиту ⬇', sortProperty: '-title' },
+  { name: 'популярности ⬆', sortProperty: ESortProperty.RATING_DESC },
+  { name: 'популярности ⬇', sortProperty: ESortProperty.RATING_ASC },
+  { name: 'цене ⬆', sortProperty: ESortProperty.PRICE_DESC },
+  { name: 'цене ⬇', sortProperty: ESortProperty.PRICE_ASC },
+  { name: 'алфавиту ⬆', sortProperty: ESortProperty.TITLE_DESC },
+  { name: 'алфавиту ⬇', sortProperty: ESortProperty.TITLE_ASC },
 ];
 
 export const Sort: React.FC = () => {
@@ -21,15 +30,17 @@ export const Sort: React.FC = () => {
   const sortType = useSelector(selectSort);
   const sortRef = React.useRef<HTMLDivElement>(null);
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<boolean>(false);
 
   const handleSort = (obj: SortItem) => {
     dispatch(setSort(obj));
   };
 
   React.useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (!event.path.includes(sortRef.current)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      const _event = event as PopupClick;
+
+      if (sortRef.current && !_event.path.includes(sortRef.current)) {
         setOpen(false);
       }
     };

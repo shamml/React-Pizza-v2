@@ -1,6 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addItem, minusItem, removeItem } from '../../redux/slices/cartSlice';
+import {
+  addItem,
+  minusItem,
+  removeItem,
+  TCartItem,
+} from '../../redux/slices/cartSlice';
 
 type CartItemProps = {
   id: number;
@@ -24,7 +29,7 @@ export const CartItem: React.FC<CartItemProps> = ({
   const dispatch = useDispatch();
 
   const handlePlus = () => {
-    dispatch(addItem({ id }));
+    dispatch(addItem({ id } as TCartItem));
   };
 
   const handleMinus = () => {
@@ -33,7 +38,7 @@ export const CartItem: React.FC<CartItemProps> = ({
 
   const handleRemove = () => {
     if (window.confirm('Вы действительно хотите удалить товар?'))
-      dispatch(removeItem({ id, price }));
+      dispatch(removeItem({ id, price } as TCartItem));
   };
 
   return (
