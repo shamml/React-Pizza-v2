@@ -7,12 +7,10 @@ import { Sort } from '../components/Sort/Sort';
 import { Skeleton } from '../components/PizzaBlock/Skeleton';
 import { PizzaBlock } from '../components/PizzaBlock';
 import { Pagination } from '../components/Pagination';
-import {
-  selectFilter,
-  setCategoryId,
-  setCurrentPage,
-} from '../redux/slices/filterSlice';
-import { fetchPizzas, selectPizzaData } from '../redux/slices/pizzaSlice';
+import { setCategoryId, setCurrentPage } from '../redux/filter/slice';
+import { fetchPizzas } from '../redux/pizza/asyncActions';
+import { selectFilter } from '../redux/filter/selectors';
+import { selectPizzaData } from '../redux/pizza/selectors';
 
 export const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -65,7 +63,7 @@ export const Home: React.FC = () => {
     <div className="container">
       <div className="content__top">
         <Categories categoryId={categoryId} handleCategory={handleCategory} />
-        <Sort  sortType={sort}/>
+        <Sort sortType={sort} />
       </div>
       <h2 className="content__title">Все пиццы</h2>
       {status === 'error' ? (

@@ -1,27 +1,16 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '../store';
+import { getCartFromLC } from '../../utils/getCartFromLC';
+import { calcTotalPrice } from '../../utils/calcTotalPrice';
+import { ICartState, TCartItem } from './types';
 
-export type TCartItem = {
-  id: number;
-  name: string;
-  imageUrl: string;
-  price: number;
-  type: string;
-  size: number;
-  count: number;
-};
-
-interface ICartState {
-  items: TCartItem[];
-  totalPrice: number;
-}
+const { items, totalPrice } = getCartFromLC();
 
 const initialState: ICartState = {
-  items: [],
-  totalPrice: 0,
+  items,
+  totalPrice,
 };
 
-export const cartSlice = createSlice({
+export const slice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
@@ -32,10 +21,7 @@ export const cartSlice = createSlice({
         ? findItem.count++
         : state.items.push({ ...action.payload, count: 1 });
 
-      state.totalPrice = state.items.reduce((sum, item) => {
-        return item.price * item.count + sum;
-      }, 0);
-      // state.totalCount = state.items.reduce((sum, item) => sum + item.count);
+      state.totalPrice = calcTotalPrice(state.items);
     },
     minusItem(state, action: PayloadAction<number>) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
@@ -52,10 +38,6 @@ export const cartSlice = createSlice({
   },
 });
 
-export const selectCart = (state: RootState) => state.cart;
-export const selectCartById = (id: number) => (state: RootState) =>
-  state.cart.items.find((obj) => obj.id === id);
+export const { addItem, removeItem, clearItem, minusItem } = slice.actions;
 
-export const { addItem, removeItem, clearItem, minusItem } = cartSlice.actions;
-
-export default cartSlice.reducer;
+export default slice.reducer;
