@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
 import './scss/app.scss';
 import { Header } from './components/Header';
 import { Home } from './pages/Home';
-import { Cart } from './pages/Cart';
-import { NotFound } from './pages/NotFound';
+
+const Cart = Loadable({
+  loader: () => import(/* webpackChunkName: "Cart" */ './pages/Cart'),
+  loading: () => <>loading...</>,
+});
+
+const NotFound = React.lazy(
+  () => import(/* webpackChunkName: "NotFound" */ './pages/NotFound'),
+);
 
 export const App: React.FC = () => {
   return (
@@ -15,7 +23,14 @@ export const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="*"
+            element={
+              <Suspense fallback={<>loading...</>}>
+                <NotFound />
+              </Suspense>
+            }
+          />
         </Routes>
       </div>
     </div>

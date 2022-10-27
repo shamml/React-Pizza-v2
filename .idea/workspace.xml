@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13a95ee6-ee35-4b2b-9dd6-603ddc163afe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/cart/selectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/cart/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/filter/selectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/filter/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/pizza/asyncActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/pizza/selectors.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/pizza/slice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/pizza/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/calcTotalPrice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/getCartFromLC.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/math.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Discord.lnk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/Gift Finder.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/debug.log" beforeDir="false" />
@@ -670,17 +662,13 @@
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/forms/Forms.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-live-search/src/components/forms/forms.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cart/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/filterSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/filter/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/pizzaSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NotFound.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NotFound.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-pro" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-project" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../react-project-1/.idea/react-project-1.iml" beforeDir="false" />
@@ -839,7 +827,7 @@
       <workItem from="1666432895958" duration="3463000" />
       <workItem from="1666450737930" duration="18419000" />
       <workItem from="1666606120342" duration="46035000" />
-      <workItem from="1666776816549" duration="16864000" />
+      <workItem from="1666776816549" duration="26298000" />
     </task>
     <servers />
   </component>
