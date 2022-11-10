@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../redux/store';
 
@@ -14,15 +14,14 @@ import { fetchPizzas } from '../redux/pizza/asyncActions';
 import { selectFilter } from '../redux/filter/selectors';
 import { selectPizzaData } from '../redux/pizza/selectors';
 
-export const Home: React.FC = () => {
+export const Home: FC = () => {
   const dispatch = useAppDispatch();
 
-  const { categoryId, sort, currentPage, searchValue } =
-    useSelector(selectFilter);
+  const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
 
   const { items, status } = useSelector(selectPizzaData);
 
-  const handleCategory = React.useCallback((value: number) => {
+  const handleCategory = useCallback((value: number) => {
     dispatch(setCategoryId(value));
   }, []);
 
@@ -30,7 +29,7 @@ export const Home: React.FC = () => {
     dispatch(setCurrentPage(value));
   };
 
-  const getPizzas = async () => {
+  const getPizzas = () => {
     const sortBy = sort.sortProperty.replace('-', '');
     const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
     const category = categoryId > 0 ? String(categoryId) : '';
@@ -49,7 +48,7 @@ export const Home: React.FC = () => {
     window.scrollTo(0, 0);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     getPizzas();
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 

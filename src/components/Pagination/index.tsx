@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import ReactPaginate from 'react-paginate';
 
 import styles from './Paginatoin.module.scss';
@@ -8,7 +8,7 @@ type TPaginationProps = {
   onChangePage: (value: number) => void;
 };
 
-export const Pagination: React.FC<TPaginationProps> = ({
+export const Pagination: FC<TPaginationProps> = ({
   currentPage,
   onChangePage,
 }) => (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 // import useWhyDidYouUpdate from 'ahooks/lib/useWhyDidYouUpdate';
 
 type TCategoriesProps = {
@@ -15,7 +15,7 @@ const categories = [
   'Закрытые',
 ];
 
-export const Categories: React.FC<TCategoriesProps> = React.memo(
+export const Categories: FC<TCategoriesProps> = React.memo(
   ({ categoryId, handleCategory }) => {
     // useWhyDidYouUpdate('Categories', { categoryId, handleCategory });
 

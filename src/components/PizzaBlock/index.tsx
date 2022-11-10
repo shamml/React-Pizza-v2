@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCartById } from '../../redux/cart/selectors';
 import { TCartItem } from '../../redux/cart/types';
@@ -16,7 +16,7 @@ type TPizzaBlockProps = {
   rating: number;
 };
 
-export const PizzaBlock: React.FC<TPizzaBlockProps> = ({
+export const PizzaBlock: FC<TPizzaBlockProps> = ({
   id,
   imageUrl,
   name,

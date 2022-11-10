@@ -22,6 +22,7 @@ export const slice = createSlice({
     minusItem(state, action: PayloadAction<number>) {
       const findItem = state.items.find((obj) => obj.id === action.payload);
       findItem && findItem.count--;
+      state.totalPrice = calcTotalPrice(state.items);
     },
     removeItem(state, action: PayloadAction<TCartItem>) {
       state.items = state.items.filter((obj) => obj.id !== action.payload.id);

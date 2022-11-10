@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, memo, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { ESortProperty, TSort } from '../../redux/filter/types';
 import { setSort } from '../../redux/filter/slice';
@@ -25,9 +25,9 @@ export const sortList: TSortItem[] = [
   { name: 'алфавиту ⬇', sortProperty: ESortProperty.TITLE_ASC },
 ];
 
-export const Sort: React.FC<TSortPopup> = React.memo(({ sortType }) => {
+export const Sort: FC<TSortPopup> = memo(({ sortType }) => {
   const dispatch = useDispatch();
-  const sortRef = React.useRef<HTMLDivElement>(null);
+  const sortRef = useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = React.useState<boolean>(false);
 
@@ -35,7 +35,7 @@ export const Sort: React.FC<TSortPopup> = React.memo(({ sortType }) => {
     dispatch(setSort(obj));
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const _event = event as PopupClick;
 

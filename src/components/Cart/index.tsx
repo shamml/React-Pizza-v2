@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItem, minusItem, removeItem } from '../../redux/cart/slice';
 import { TCartItem } from '../../redux/cart/types';
@@ -13,7 +13,7 @@ type TCartItemProps = {
   size: number;
 };
 
-export const CartItem: React.FC<TCartItemProps> = ({
+export const CartItem: FC<TCartItemProps> = ({
   id,
   imageUrl,
   name,
