@@ -6,21 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13a95ee6-ee35-4b2b-9dd6-603ddc163afe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/CartEmpty.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/CartEmpty.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFoundBlock/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/Skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/Skeleton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaBlock/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaBlock/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/NotFound.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NotFound.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/cart/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/cart/slice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/shmlch/pizzeria-frontend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/shmlch/pizzeria-frontend/node_modules/prettier",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "ts.external.directory.path": "/Users/shmlch/pizzeria-frontend/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shmlch/pizzeria-frontend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/shmlch/pizzeria-frontend/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/shmlch/pizzeria-frontend/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\react-pizza-v2\src\redux" />
@@ -107,7 +92,10 @@
       <workItem from="1668105883106" duration="43000" />
       <workItem from="1668105944797" duration="92000" />
       <workItem from="1668106047543" duration="279000" />
-      <workItem from="1668110308906" duration="2129000" />
+      <workItem from="1668110308906" duration="3374000" />
+      <workItem from="1668166121670" duration="390000" />
+      <workItem from="1668354992687" duration="46000" />
+      <workItem from="1668357907172" duration="811000" />
     </task>
     <servers />
   </component>
